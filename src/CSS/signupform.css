@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #1f2833;
+  max-height: 100vh;
+}
+.form_container{
+  background:#264646;
+  border-radius: 10px;
+  max-width: 45vw;
+  margin:10vh auto;
+  padding: 15px;
+}
+
+label{
+  position: relative;
+  left:-45px;
+}
+
+#pwd{
+  position: relative;
+  left: -30px;
+}
+
+input{
+  border-radius: 8px;
+  width: 350px;
+  height: 30px;
+}
+
+/*My OCD is the villain for the following modifications */
+#username{
+  position: relative;
+  right: -5px;
+}
+#password{
+  position: relative;
+  right: -20px;
+}
+#email{
+  position: relative;
+  right: 15px;
+}
+
+.input{
+  padding: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.btn_container{
+  display: flex;
+  justify-content: center;
+}
+
+.btn,.btn2{
+  font-size: .75em;
+  border-radius: 10px;
+  padding: 5px;
+  animation: btn_animation 2.5s linear 4.5s infinite;
+}
+
+@keyframes btn_animation{
+  0%{
+    transform:scale(1,1);
+  }
+  50%{
+    transform: scale(.8,.8);
+  }
+  100%{
+    transform:scale(1,1);
+  }
+}
+
+/* For the typing effect for the welcoming message */
+.typewriter_container{
+  display: inline-block;
+  position: relative;
+  top: 10vh;
+  left: 43vw;
+}
+.typed_out{
+  font-family: 'Trebuchet MS', sans-serif; 
+  color: white;
+  font-size: 1.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+#one{
+  position: relative;
+  left: 3.5vw;
+  animation: typing_effect 1.9s steps(35,end) forwards;  
+}
+#two{
+  border-right: .15em solid transparent;
+  animation: typing_effect 2s steps(60,end) 2s forwards,blinking .95s 2s infinite;
+}
+
+@keyframes typing_effect{
+  from{width:0}
+  to{width: 100%}
+}
+
+@keyframes blinking{
+  from{border-color: white}
+  to{border-color: transparent}
+}
+
+/* Password Visibility */
+.pwd_btn{
+  position: relative;
+  top:0px;
+  left:30px;
+  width: 29px;
+  height: 25px;
+  border-radius: 5px;
+}
+.pwd_container{
+  position: relative;
+  top: -32px;
+}
+.btn2{
+  position: relative;
+  top: 70px;
+}

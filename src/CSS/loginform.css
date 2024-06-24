@@ -1,0 +1,94 @@
+/* The basic layout for login container  */
+.page_container{
+  background-color:rgb(217, 124, 124);
+  width:25vw;
+  min-height:65vh;
+  border-radius:9px;
+  position: relative;
+  top: 15vh;
+  left:39vw;
+}
+
+/* Styling for the Login Page */
+.form{
+  min-height: 50vh;
+  position: relative;
+  top: 5vh;
+}
+.greeting{
+  text-align: center;
+  font-size: .8em;
+  font-weight: lighter;
+  font-family: 'Trebuchet MS', sans-serif;
+  position: absolute;
+  top: 2vh;
+  left: 7.5vw;
+}
+.loginform{
+  background-color: white;
+  width: 20vw;
+  height:30vh;
+  border-radius: 5px;
+  position: absolute;
+  top: 10vh;
+  left: 2.55vw;
+}
+#user_name,#pass_word,.pwd_btn2{
+  border-radius: 4px;
+  position: absolute;
+  width: 15vw;
+  left: 2vw;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+}
+
+
+input:focus {
+  outline: none;
+}
+input#user_name{
+  top: 5vh;
+}
+input#pass_word,.pwd_btn2{
+  top: 13vh;
+}
+.pwd_btn2{
+  width: auto;
+  top:15vh;
+  left: 17.5vw;
+}
+.form_btn{
+  position: absolute;
+  background-color: pink;
+  border-radius: 20px;
+  top: 19vh;
+  left: 5.2vw;
+  padding: 5px;
+  width:9vw;
+}
+
+.new_user_greeting,.sign_up_btn{
+  position: relative;
+  top: 45vh;
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.sign_up_btn{
+  left: 10vw;
+  top: 46vh;
+  border-radius: 5px;
+  animation: btn_animation linear 4.5s infinite;
+}
+
+@keyframes btn_animation{
+  0%{
+    transform:scale(1.1,1.1);
+  }
+  50%{
+    transform: scale(.9,.9);
+  }
+  100%{
+    transform:scale(1.1,1.1);
+  }
+}

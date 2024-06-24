@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --all_transitions: all linear .35s;
+  --bg_color:#18314f;
+  --df_width:100vw;
+  --df_height:89vh;
+  --df_ffam:'Trebuchet MS', sans-serif;
+}
+
+body{
+  background-color:var(--bg_color);
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+} 
+
+.nav_bar{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav_items{
+  font-size: 1.35rem;
+  color: white;
+  padding-top: 10px;
+  display: inline-block;
+  width: 10vw;
+  height: 6.5vh;
+  text-align: center;
+  text-decoration: none;
+}
+

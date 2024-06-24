@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect,useState} from 'react'
+import axios from 'axios'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import './CSS/index.css'
+import './CSS/home.css'
+import './CSS/loginform.css'
+import './CSS/signupform.css'
+import Login from './Routes/login'
+import Homepage from './Routes/homepage'
+import Signup from './Routes/signup'
 
-function App() {
+export const dataContext = React.createContext()
+
+const App = () => {
+  const [data,setData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const url = 'http://localhost:5000/api/measurements';
+      try {
+        const response = await axios(url);
+        setData(response.data)
+      }catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router >
+      <dataContext.Provider value={{data}}>
+      <Routes>
+        <Route path='/homepage' element={<Homepage />} /> 
+        <Route path='/' element={<Login />} />
+        <Route path='/signup' element={<Signup/>} />
+      </Routes>
+      </dataContext.Provider> 
+    </Router>
+  )
 }
 
-export default App;
+export default App
