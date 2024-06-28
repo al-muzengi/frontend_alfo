@@ -13,7 +13,7 @@
 body{
   background-color:var(--bg_color);
   width: 100vw;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
 } 
 
@@ -29,9 +29,12 @@ body{
   color: white;
   padding-top: 10px;
   display: inline-block;
-  width: 10vw;
+  width: fit-content;
   height: 6.5vh;
   text-align: center;
   text-decoration: none;
 }
-
+.reading_container{
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw 20vw 20vw;
+}

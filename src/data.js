@@ -1,7 +1,7 @@
 export const nav_items = [
   {
     id:"one",
-    title:"Homepage",
+    title:"DATA READ FROM SENSORS",
     link:"/homepage"
   }
 ]

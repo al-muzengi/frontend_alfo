@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = 'http://localhost:5000/api/measurements';
+      const url = 'http://localhost:5000/api/readings/';
       try {
         const response = await axios(url);
         setData(response.data)
